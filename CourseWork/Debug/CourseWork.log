@@ -1,0 +1,12 @@
+﻿  CourseWork.cpp
+  Quadrilateral.cpp
+  Triangle.cpp
+  Создание кода...
+C:\Work\GitHub\Course\CourseWork\CourseWork\CourseWork\Triangle.cpp(54): warning C4715: Triangle::SelectShape: значение возвращается не при всех путях выполнения
+C:\Work\GitHub\Course\CourseWork\CourseWork\CourseWork\Triangle.cpp(45): warning C4172: возвращение адреса локальной или временной переменной : rightTri
+C:\Work\GitHub\Course\CourseWork\CourseWork\CourseWork\Triangle.cpp(50): warning C4172: возвращение адреса локальной или временной переменной : rightDegreeTri
+C:\Work\GitHub\Course\CourseWork\CourseWork\CourseWork\Quadrilateral.cpp(58): warning C4715: Quadrilateral::SelectShape: значение возвращается не при всех путях выполнения
+C:\Work\GitHub\Course\CourseWork\CourseWork\CourseWork\Quadrilateral.cpp(45): warning C4172: возвращение адреса локальной или временной переменной : rec
+C:\Work\GitHub\Course\CourseWork\CourseWork\CourseWork\Quadrilateral.cpp(50): warning C4172: возвращение адреса локальной или временной переменной : par
+C:\Work\GitHub\Course\CourseWork\CourseWork\CourseWork\Quadrilateral.cpp(55): warning C4172: возвращение адреса локальной или временной переменной : trap
+  CourseWork.vcxproj -> C:\Work\GitHub\Course\CourseWork\CourseWork\Debug\CourseWork.exe
