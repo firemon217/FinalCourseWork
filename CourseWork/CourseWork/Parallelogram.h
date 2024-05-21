@@ -7,6 +7,7 @@ public:
 	Parallelogram(); //Конструктор
 	void Scale() override; //Увелечение фигуры
 	void Rendering(); //Отрисовка фигуры
+	void RenderingInFile(); //Отрисовка фигуры в файл
 	std::string GetQuadrilateralName()
 	{
 		return this->quadrilateralName;

@@ -1,5 +1,6 @@
 #include"Line.h"
 #include<iostream>
+#include<fstream>
 
 using namespace std;
 
@@ -7,11 +8,9 @@ Line::Line() //Конструктор, в котором задаются размеры линии
 {
 	cout << "Введите размер линии:" << endl;
 	cin >> this->size;
-	this->startCoordinate = this->positionX; //Координата начала линии
-	this->endCoordinate = this->positionX + size; //координата конца линии
 }
 
-void Line::Rotate() //Поворот на 90 градусов:??????????
+void Line::Rotate() //Поворот на 90 градусов
 {
 	if (this->rotateDegrees == 0)
 	{
@@ -75,8 +74,34 @@ void Line::Rendering() //Отрисовка линии
 	}
 }
 
-Line& Line::SelectShape()
+void Line::RenderingInFile() //Отрисовка линии
 {
-	Line line;
-	return line;
+	ofstream file("Line.txt");
+	for (int i = 0; i < this->positionY; i++)
+	{
+		file << endl;
+	}
+	if (this->rotateDegrees == 0) //Если угол поворота 0
+	{
+		for (int l = 0; l < this->positionX; l++)
+		{
+			file << " ";
+		}
+		for (int i = 0; i < this->size; i++)
+		{
+			file << "* ";
+		}
+		file << endl;
+	}
+	else //Если угол поворота 90
+	{
+		for (int l = 0; l < this->positionX; l++)
+		{
+			file << " ";
+		}
+		for (int i = 0; i < this->size; i++)
+		{
+			file << "*" << endl;
+		}
+	}
 }

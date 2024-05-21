@@ -1,5 +1,6 @@
 #include"Rectangle.h"
 #include<iostream>
+#include<fstream>
 #include"math.h"
 
 using namespace std;
@@ -49,4 +50,33 @@ void Rectangle::Rendering() //Отрисовка прямоугольника
 		cout << endl;
 	}
 }
+
+void Rectangle::RenderingInFile() //Отрисовка прямоугольника
+{
+	ofstream file("Rectangle.txt");
+	int height = this->height; //Высота
+	int width = this->width; //Длина
+	if (this->rotateDegrees == 90) //Учитывание поворота прямоугольника
+	{
+		height = this->width;
+		width = this->height;
+	}
+	for (int i = 0; i < this->positionY; i++)
+	{
+		file << endl;
+	}
+	for (int i = 0; i < height; i++) //Отрисовка
+	{
+		for (int l = 0; l < this->positionX; l++)
+		{
+			file << " ";
+		}
+		for (int j = 0; j < width; j++)
+		{
+			file << "# ";
+		}
+		file << endl;
+	}
+}
+
 

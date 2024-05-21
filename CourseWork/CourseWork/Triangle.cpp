@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void Triangle::Rotate() //??????????
+void Triangle::Rotate() //Поворот фигуры на 180 градусов
 {
 	if (this->rotateDegrees == 0)
 	{
@@ -31,22 +31,22 @@ void Triangle::Translate() //Перемещает треугольник на определенные координаты
 	this->positionY += y; //Назначение перемещения по у
 }
 
-Triangle& Triangle::SelectShape()
+Triangle& Triangle::SelectShape() //Выбор и возврат наследника
 {
 
 	cout << "Выберите тип треугольника:\n1. Правильный треугольник\n2. Прямоугольниый треугольник" << endl;
-	int n = 0;
+	int n = 0; //Выбор
 	cin >> n;
 	switch (n)
 	{
-		case 1:
+		case 1: //Правильный треугольник
 		{
-			RightTriangle rightTri;
+			RightTriangle rightTri; //Создает экземпляр правильного треугольника
 			return rightTri;
 		}
-		case 2:
+		case 2: //Прямоугольный треугольник
 		{
-			RightDegreeTriangle rightDegreeTri;
+			RightDegreeTriangle rightDegreeTri; //Создает экземпляр прямоугольного треугольника
 			return rightDegreeTri;
 		}
 

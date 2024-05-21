@@ -7,6 +7,7 @@ public:
 	Trapezoid(); //Конструктор
 	void Scale() override; //Увелечение фигуры
 	void Rendering(); //Отрисовка фигуры
+	void RenderingInFile(); //Отрисовка фигуры в файл
 	std::string GetQuadrilateralName()
 	{
 		return this->quadrilateralName;
@@ -14,6 +15,6 @@ public:
 private:
 	int bigGround; //большее основание
 	int smallGround; //меньшее освнование
-	std::string quadrilateralName = "Parallelogram";
+	std::string quadrilateralName = "Trapezoid";
 };
-#pragma once
+

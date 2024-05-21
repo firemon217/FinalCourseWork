@@ -1,5 +1,6 @@
 #include"Trapezoid.h"
 #include<iostream>
+#include<fstream>
 #include"math.h"
 
 using namespace std;
@@ -47,5 +48,33 @@ void Trapezoid::Rendering() //Отрисовка трапеции
 			cout << "#";
 		}
 		cout << endl;
+	}
+}
+
+void Trapezoid::RenderingInFile() //Отрисовка трапеции
+{
+	ofstream file("Trapezoid.txt");
+	int smallGround = this->smallGround; //Высота
+	int bigGround = this->bigGround; //Длина
+	for (int i = 0; i < this->positionY; i++)
+	{
+		file << endl;
+	}
+	double proc;
+	for (int i = 0; i <= bigGround - smallGround; i += 2) //Отрисовка
+	{
+		for (int l = 0; l < this->positionX; l++)
+		{
+			file << " ";
+		}
+		for (int j = 1; j <= (bigGround - smallGround - i) / 2; j++)
+		{
+			file << " ";
+		}
+		for (int j = 1; j <= smallGround + i; j++)
+		{
+			file << "#";
+		}
+		file << endl;
 	}
 }

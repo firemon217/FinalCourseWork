@@ -9,15 +9,13 @@ class Line //Класс Линий, наследуемый от класса Фигур
 		void Translate(); //Перемещение по оси фигуры
 		void Scale(); //Увеличение размеров фигуры
 		void Rendering(); //Отрисовка фигуры
-		static Line& SelectShape();
+		void RenderingInFile(); //Отрисовка фигуры в файл
 		std::string GetLineName()
 		{
-			return nameLine;
+			return this->nameLine;
 		};
 	private:
 		int size; //Размер линии
-		int startCoordinate; //Координата начала линии
-		int endCoordinate; //координата конца линии
 		std::string nameLine = "Line";
 		int positionX = 0; //Позиция по x
 		int positionY = 0; //Позиция по y

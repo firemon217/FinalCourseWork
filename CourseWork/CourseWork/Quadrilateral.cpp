@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void Quadrilateral::Rotate() //??????????
+void Quadrilateral::Rotate() //Поворот фигуры на 90 градусов
 {
 	if (this->rotateDegrees == 0)
 	{
@@ -32,26 +32,26 @@ void Quadrilateral::Translate()
 	this->positionY += y; //Назначение перемещения по у
 }
 
-Quadrilateral& Quadrilateral::SelectShape()
+Quadrilateral& Quadrilateral::SelectShape() //Выбор и возврат наследника
 {
 	cout << "Выберите тип четырехугольника:\n1. Прямоугольник\n2. Параллелограм\n3. Трапеция" << endl;
-	int n = 0;
+	int n = 0; //Выбор
 	cin >> n;
 	switch (n)
 	{
-		case 1:
+		case 1: //Прямоугольник
 		{
-			Rectangle rec;
+			Rectangle rec; //Создает экземпляр прямоугольника
 			return rec;
 		}
-		case 2:
+		case 2: //Параллелепипед
 		{
-			Parallelogram par;
+			Parallelogram par; //Создает экземпляр параллелепипеда
 			return par;
 		}
-		case 3:
+		case 3: //Трапеция 
 		{
-			Trapezoid trap;
+			Trapezoid trap; //Создает экземпляр трапеции
 			return trap;
 		}
 	}

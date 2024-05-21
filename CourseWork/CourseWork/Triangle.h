@@ -8,6 +8,7 @@ public:
 	void Translate(); //Перемещение по оси фигуры
 	virtual void Scale() = 0; //Увеличение размеров фигуры
 	virtual void Rendering() = 0; //Отрисовка фигуры
+	virtual void RenderingInFile() = 0; //Отрисовка фигуры в файл
 	virtual std::string GetTriangleName() = 0;
 	static Triangle& SelectShape();
 protected:
